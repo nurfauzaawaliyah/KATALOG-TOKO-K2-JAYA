@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko K2 Jaya</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        .header, .footer { background: #007bff; color: white; padding: 20px; font-size: 20px; }
+        .search-box { margin: 20px 0; }
+        input { padding: 10px; width: 80%; font-size: 16px; }
+        .product { border-bottom: 1px solid #ddd; padding: 10px 0; display: none; }
+        .visible { display: block; }
+        .contact { padding: 20px; font-size: 18px; }
+    </style>
+    <script>
+        function searchProduct() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let products = document.getElementsByClassName('product');
+            for (let i = 0; i < products.length; i++) {
+                let text = products[i].textContent.toLowerCase();
+                products[i].classList.toggle('visible', text.includes(input));
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">SELAMAT DATANG DI TOKO K2 JAYA, BERIKUT KATALOG PRODUK</div>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="search" onkeyup="searchProduct()" placeholder="Cari produk...">
+        </div><div class="product visible"><p><strong>1. Asem</strong> - Rp 1.000</p></div>
+    <div class="product visible"><p><strong>2. Autan</strong> - Rp 1.000</p></div>
+    <div class="product visible"><p><strong>3. Bejo Anak</strong> - Rp 2.000</p></div>
+    <div class="product visible"><p><strong>4. Beras 1 kg</strong> - Rp 14.000</p></div>
+    <div class="product visible"><p><strong>5. Beras 5 kg</strong> - Rp 70.000</p></div>
+    <div class="product visible"><p><strong>6. Minyak Kita 1L</strong> - Rp 17.500</p></div>
+    <div class="product visible"><p><strong>7. Pepsodent</strong> - Rp 5.000</p></div>
+    <div class="product visible"><p><strong>8. Telur 1 kg</strong> - Rp 30.000</p></div>
+    
+    <p>Dan masih banyak lagi...</p>
+</div>
+
+<div class="footer contact">
+    JIKA ANDA TERTARIK, HUBUNGI KAMI SEGERA:<br>
+    WhatsApp: <a href="https://wa.me/085101562023" style="color: white;">085101562023</a><br>
+    Email: <a href="mailto:tokokelontong@example.com" style="color: white;">tokokelontong@example.com</a>
+</div>
+
+</body>
+</html>
